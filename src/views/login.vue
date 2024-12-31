@@ -110,19 +110,22 @@ h1 {
     box-shadow: 1px 1px 8px 8px var(--primary-color);
     border-radius: 50%;
     animation-delay: 5s;
-    animation: pulse-wave 7s infinite;
+    animation: pulse-wave 6s infinite;
 }
 
 @keyframes pulse-wave {
-    from {
+    0% {
         height: 100px;
         width: 100px;
         opacity: 2.5;
     }
 
-    to {
+    85% {
         height: 1050px;
         width: 1150px;
+    }
+
+    100% {
         opacity: 0;
     }
 }
