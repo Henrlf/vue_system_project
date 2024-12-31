@@ -5,9 +5,8 @@ import buttonComponent from '@/components/containers/button.vue';
 
 <template>
     <div class="login-page-container">
-        <div >
-            <div class="pulse-wave"/>
-        </div>
+        <div class="svg-bg"/>
+        <div class="pulse-wave"/>
         <div class="svg"/>
 
         <div class="div-login">
@@ -56,6 +55,22 @@ h1 {
     height: 100%;
 }
 
+.svg-bg {
+    position: absolute;
+    background-color: #363636;
+    width: 1150px;
+    height: 920px;
+    z-index: 0;
+}
+
+.svg {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("@/assets/loginbg.svg") no-repeat center;
+    z-index: 1;
+}
+
 .div-login {
     position: absolute;
     min-width: 410px;
@@ -89,47 +104,27 @@ h1 {
     border-bottom-right-radius: 10px;
 }
 
-.svg {
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url("@/assets/loginbackground.svg") no-repeat center;
-    z-index: 1;
-}
-
 .pulse-wave {
     position: absolute;
-    background-color: #cd7f21;
+    background-color: var(--primary-color);
     box-shadow: 1px 1px 8px 8px var(--primary-color);
     border-radius: 50%;
     animation-delay: 5s;
-    animation: pulse-wave 5s infinite;
+    animation: pulse-wave 7s infinite;
 }
 
 @keyframes pulse-wave {
-    0% {
+    from {
         height: 100px;
         width: 100px;
-        opacity: 2;
+        opacity: 2.5;
     }
 
-    80% {
-        opacity: 0.1;
-    }
-
-    100% {
-        height: 1000px;
+    to {
+        height: 1050px;
         width: 1150px;
         opacity: 0;
     }
 }
 
 </style>
-
-<!--
-    transform: scaleX(20) scaleY(10);
-    transform: scaleY(85%);
-    width: 100vw;
-    background-size: 100vw 100vh;
-    background-color: #363636;
--->
