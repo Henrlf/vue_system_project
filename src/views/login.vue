@@ -73,7 +73,7 @@ h1 {
 
 .div-login {
     position: absolute;
-    min-width: 410px;
+    min-width: 400px;
     height: 580px;
     margin-bottom: 20px;
     background-color: #262626;
@@ -110,7 +110,7 @@ h1 {
     box-shadow: 1px 1px 8px 8px var(--primary-color);
     border-radius: 50%;
     animation-delay: 5s;
-    animation: pulse-wave 6s infinite;
+    animation: pulse-wave 10s infinite;
 }
 
 @keyframes pulse-wave {
@@ -120,14 +120,16 @@ h1 {
         opacity: 2.5;
     }
 
-    85% {
+    50% {
         height: 1050px;
         width: 1150px;
     }
 
-    100% {
+    70% {
         opacity: 0;
     }
-}
 
+    100% {
+    }
+}
 </style>

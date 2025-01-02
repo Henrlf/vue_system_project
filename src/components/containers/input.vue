@@ -10,7 +10,7 @@ defineProps({
 <template>
     <div class="container">
         <label :for="id" class="input-label">{{ label }}</label>
-        <input :id="id" :name="id" :type="type" :value="value" class="input-container"/>
+        <input :id="id" :name="id" :type="type" :value="value" class="input-container" :placeholder="label"/>
     </div>
 </template>
 
