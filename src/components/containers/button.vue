@@ -2,9 +2,11 @@
 defineProps({
     id: String,
     label: String,
+    onClick: String,
     type: {
         type: String,
-        default: 'submmit',
+        default: 'button',
+        validator: (value) => ['button', 'submit'].includes(value),
     },
     customClass: {
         type: String,

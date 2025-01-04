@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
+        id="svg1"
         width="1920"
         height="920"
         viewBox="0 0 1920 920"
         version="1.1"
-        id="svg1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:svg="http://www.w3.org/2000/svg">
-    <defs
-            id="defs1"/>
-    <g
-            id="layer1"
-            style="display:inline;mix-blend-mode:normal;fill:#003ec7;fill-opacity:1">
+        xmlns="http://www.w3.org/2000/svg">
+    <g id="layer1" style="display:inline;mix-blend-mode:normal;fill:#003ec7;fill-opacity:1">
         <path
                 id="rect573"
                 style="display:inline;mix-blend-mode:normal;fill:#181818;fill-opacity:1;stroke:none;stroke-width:2.42769;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
@@ -21,14 +14,14 @@
         />
     </g>
     <path
-            style="display:none;opacity:1;mix-blend-mode:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+            id="path1"
             d="m 1167.9578,290.4705 v 35.00179"
-            id="path1"/>
+            style="display:none;opacity:1;mix-blend-mode:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"/>
     <rect
-            style="display:none;opacity:1;mix-blend-mode:normal;fill:#808080;fill-opacity:1;fill-rule:nonzero"
             id="rect27"
             width="422.39999"
             height="680"
             x="748.58698"
-            y="188.90158"/>
+            y="188.90158"
+            style="display:none;opacity:1;mix-blend-mode:normal;fill:#808080;fill-opacity:1;fill-rule:nonzero"/>
 </svg>

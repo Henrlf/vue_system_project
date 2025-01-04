@@ -1,6 +1,21 @@
 <script setup>
+import {reactive} from 'vue';
 import inputComponent from '@/components/containers/input.vue';
 import buttonComponent from '@/components/containers/button.vue';
+import axios from "axios";
+
+reactive({
+    data: []
+});
+
+async function login() {
+    try {
+        const response = await axios.get('https://api.example.com/endpoint');
+        this.data = response.data;
+    } catch (error) {
+        console.error('Erro ao buscar dados:', error);
+    }
+}
 </script>
 
 <template>
@@ -14,21 +29,23 @@ import buttonComponent from '@/components/containers/button.vue';
                 <img alt="Vue logo" class="logo" src="./../assets/logo.svg"/>
             </div>
 
-            <div class="login-body">
-                <h1>Login</h1>
+            <form @submit.prevent="login" method="post">
+                <div class="login-body">
+                    <h1>Login</h1>
 
-                <div class="row">
-                    <inputComponent :id="'idTeste'" :type="'email'" :label="'E-mail'" class="column-10"/>
-                </div>
+                    <div class="row">
+                        <inputComponent id="idTeste" type="email" label="E-mail" class="column-10"/>
+                    </div>
 
-                <div class="row">
-                    <inputComponent :id="'password'" :type="'password'" :label="'Password'" class="column-10"/>
-                </div>
+                    <div class="row">
+                        <inputComponent id="password" type="password" label="Password" class="column-10"/>
+                    </div>
 
-                <div class="row">
-                    <buttonComponent :label="'Login'" class="column-10" customClass="primary"/>
+                    <div class="row">
+                        <buttonComponent label="Login" type="submit" class="column-10" customClass="primary"/>
+                    </div>
                 </div>
-            </div>
+            </form>
 
             <div class="login-footer"></div>
         </div>

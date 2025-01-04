@@ -2,8 +2,12 @@
 defineProps({
     id: String,
     label: String,
-    type: String,
     value: String,
+    type: {
+        type: String,
+        default: 'text',
+        validator: (value) => ['text', 'email', 'password', 'number', 'tel'].includes(value),
+    },
 });
 </script>
 
