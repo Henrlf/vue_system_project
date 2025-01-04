@@ -10,7 +10,9 @@ reactive({
 
 async function login() {
     try {
-        const response = await axios.get('https://api.example.com/endpoint');
+        let url = this.getSystemUrl('/login');
+
+        const response = await axios.get(url);
         this.data = response.data;
     } catch (error) {
         console.error('Erro ao buscar dados:', error);
@@ -84,7 +86,7 @@ h1 {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    background: url("@/assets/loginbg.svg") no-repeat center;
+    background: url("@/Assets/Loginbg.svg") no-repeat center;
     z-index: 1;
 }
 
