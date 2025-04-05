@@ -1,22 +1,13 @@
 import {createRouter, createWebHistory} from 'vue-router';
-import login from '../views/login.vue';
+import main from '../router/main.js';
 // import About from '../views/About.vue';
 
 const routes = [
-    {
-        path: '/',
-        name: 'login',
-        component: login,
-    },
-    // {
-    //     path: '/about',
-    //     name: 'About',
-    //     component: About,
-    // },
+    ...main,
 ];
 
 const router = createRouter({
-    history: createWebHistory(), // Modo de histórico
+    history: createWebHistory(),
     routes,
 });
 

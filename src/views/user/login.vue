@@ -28,7 +28,7 @@ async function login() {
 
         <div class="div-login">
             <div class="login-header ">
-                <img alt="Vue logo" class="logo" src="./../assets/logo.svg"/>
+                <img alt="Vue logo" class="logo" src="../../assets/logo.svg"/>
             </div>
 
             <form @submit.prevent="login" method="post">
@@ -86,7 +86,7 @@ h1 {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    background: url("@/Assets/Loginbg.svg") no-repeat center;
+    background: url("@/assets/loginbg.svg") no-repeat center;
     z-index: 1;
 }
 
@@ -146,9 +146,6 @@ h1 {
 
     70% {
         opacity: 0;
-    }
-
-    100% {
     }
 }
 </style>

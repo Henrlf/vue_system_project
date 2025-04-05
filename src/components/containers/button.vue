@@ -2,7 +2,7 @@
 defineProps({
     id: String,
     label: String,
-    onClick: String,
+    onClick: Function,
     type: {
         type: String,
         default: 'button',

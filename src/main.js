@@ -1,11 +1,13 @@
-import './assets/case.css';
+import './assets/base.css';
 import './assets/components.css';
 
 import {createApp} from 'vue';
-import App from './views/login.vue';
+import App from './app.vue';
 import router from './router/router.js';
 
 const app = createApp(App);
+app.use(router);
+
 const url = 'localhost';
 const port = '81';
 
@@ -23,5 +25,5 @@ app.config.globalProperties.getSystemUrl = (endepoint = '') => {
     return `${systemUrl}/${endepoint}`;
 };
 
-app.use(router).mount('#app');
+app.mount('#app');
 
